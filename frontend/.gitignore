@@ -1,0 +1,22 @@
+# React Native
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Expo
+.expo/
+.expo-shared/
+
+# dotenv environment variables file
+.env
+
+# IDEs and editors
+.vscode/
+.idea/
