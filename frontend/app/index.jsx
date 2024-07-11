@@ -26,32 +26,32 @@ const DrawerNavigator = ({navigation}) => {
   const { data } = route.params || {};
 
   return (
-    <CustomDrawerContent >
-      <DrawerItem
-        label="Home"
-        onPress={() => navigation.navigate('Home', { extraData: data })}
-      />
-      <DrawerItem
-        label="DailyForecast"
-        onPress={() => navigation.navigate('DailyWeatherForecast')}
-      />
-      <DrawerItem
-        label="TodayForecast"
-        onPress={() => navigation.navigate('TodayWeatherCast')}
-      />
-      <DrawerItem
-        label="SaveLocations"
-        onPress={() => navigation.navigate('SaveLocationScreen')}
-      />
-    </CustomDrawerContent>
-    // <Drawer.Navigator initialRouteName='Home' screenOptions={{ headerShown:false }} >
-    //   <Drawer.Screen name="Home">
-    //     {props => <Home {...props} extraData={data} />} 
-    //   </Drawer.Screen>
-    //   <Drawer.Screen name='DailyForecast' component={DailyWeatherForecast}/>
-    //   <Drawer.Screen name='TodayForecast' component={TodayWeatherCast}/>
-    //   <Drawer.Screen name='SaveLocations' component={SaveLocationScreen}/>
-    // </Drawer.Navigator>
+    // <CustomDrawerContent >
+    //   <DrawerItem
+    //     label="Home"
+    //     onPress={() => navigation.navigate('Home', { extraData: data })}
+    //   />
+    //   <DrawerItem
+    //     label="DailyForecast"
+    //     onPress={() => navigation.navigate('DailyWeatherForecast')}
+    //   />
+    //   <DrawerItem
+    //     label="TodayForecast"
+    //     onPress={() => navigation.navigate('TodayWeatherCast')}
+    //   />
+    //   <DrawerItem
+    //     label="SaveLocations"
+    //     onPress={() => navigation.navigate('SaveLocationScreen')}
+    //   />
+    // </CustomDrawerContent>
+    <Drawer.Navigator initialRouteName='Home' screenOptions={{ headerShown:false }} >
+      <Drawer.Screen name="Home">
+        {props => <Home {...props} extraData={data} />} 
+      </Drawer.Screen>
+      <Drawer.Screen name='DailyForecast' component={DailyWeatherForecast}/>
+      <Drawer.Screen name='TodayForecast' component={TodayWeatherCast}/>
+      <Drawer.Screen name='SaveLocations' component={SaveLocationScreen}/>
+    </Drawer.Navigator>
   )
 }
 
