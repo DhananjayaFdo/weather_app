@@ -57,6 +57,14 @@ function formatDateTime() {
   const convertKelvinToCelsius = (kelvin) => {
     return Math.round(kelvin - 273.15);
   }; 
+
+  const  navToHome = () => {
+    navigation.navigate('Home');
+  }
+
+  const  navToSave = () => {
+    navigation.navigate('SaveLocations');
+  }
   
 
 if(isLoading){
@@ -81,11 +89,11 @@ return (
     <View className="flex-row justify-between">
         <View className="flex-row">
             <IconButton icon={'menu'} method={ navigation.openDrawer}/>
-            <IconButton icon={'refresh-cw'}/>
+            <IconButton icon={'refresh-cw'}  method={navToHome}/>
         </View>
 
         <View className="flex-row">
-            <IconButton icon={'star'}/>
+            <IconButton icon={'star'} method={navToSave}/>
             <IconButton icon={'search'} method={navToSearch}/>
 
         </View>
